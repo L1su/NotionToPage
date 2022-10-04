@@ -1,0 +1,123 @@
+/**! 1 **/
+/**? 2 **/
+/**  3 **/
+
+
+
+/**! Oryginalne menu Notion **/
+    /**? PC **/ 
+        /** Ukrycie CAŁEGO paska menu - usuń komentarz **/
+            /** .notion-topbar { display: none !important;} **/
+
+
+        /** Ukrycie paska nawigacji po stronach **/
+            /** div.notion-topbar > div > div.notranslate {display: none !important;}
+                div.notion-topbar > div > div:nth-child(1){ display: none !important;}  **/
+
+
+        /** Ukrycie kolejnych linków paska nawigacji po stronach **/
+        div.notion-topbar > div > div.notranslate > span {display: none !important;}
+        div.notion-topbar > div > div.notranslate > span {visibility: hidden !important;}
+        div.notion-topbar > div > div.notranslate > div:not(:nth-child(1)) {display: none !important; }
+
+
+        /** Ukrycie light/dark mode **/
+            /** div.notion-topbar > div > div:nth-child(1n).toggle-mode { display: none !important; } **/
+
+
+        /** Ukrycie wyszukiwarki **/
+            /** div.notion-topbar > div > div:nth-child(3){display: none !important;}
+                div.notion-topbar > div > div.notion-focusable:nth-child(3){display: none !important;} **/
+
+
+        /** Ukrycie wszystkich linków menu dostraczonyc przez Notion (Duplicate, dots, try notion) **/
+            div.notion-topbar > div > div.notion-focusable:nth-child(n+4){display: none !important;}
+
+
+        /** [LANG] Zmiana słowa "search" **/
+            div.notion-topbar > div > div.notion-focusable:nth-child(3) { font-size: 0 !important;}
+            div.notion-topbar > div > div.notion-focusable:nth-child(3):after {
+                content: 'Szukaj' !important; 
+                font-size: 14px !important;
+            }     
+
+
+        /** Ukrycie seperatora  | **/
+            /**div.notion-topbar > div > div:nth-child(6){ display: none !important; }**/
+
+
+    /**? PHON **/
+        /** Ukrycie CAŁEGO paska menu **/
+            .notion-topbar-mobile { display: none !important; } 
+
+
+        /** Ukrycie paska nawigacji po stronach **/
+            /**div.notion-topbar-mobile >  .notranslate { display: none !important; }**/
+        
+
+        /** Ukrycie kolejnych linków nawigacji przykład: [icona] mojastrona / [icona] podstrona **/
+            div.notion-topbar-mobile > div > span { display: none !important; }
+            div.notion-topbar-mobile > div > div:not(:nth-child(1)) { display: none !important; }
+        
+
+        /** Ukrycie light/dark mode **/
+            /** div.notion-topbar-mobile > div:nth-child(1n).toggle-mode { display: none !important; } **/
+        
+
+        /** Przeniesienie light/dark na prawo **/
+            div.notion-topbar-mobile > div:nth-child(1n).toggle-mode { order: 3 !important; }
+        
+
+        /** Usuwanie marginesów dark/light **/
+            div.notion-topbar-mobile > div:nth-child(1n).toggle-mode > div {                                                  
+                margin-right: auto !important;
+                margin-left: auto !important;
+            }
+        
+
+        /** Ukrycie wyszukiwarki **/
+            /**div.notion-topbar-mobile > div:nth-child(4) { display: none !important; }**/
+        
+
+        /** Ukrycie notion menu (3 kropki) **/
+            div.notion-topbar-mobile > div:last-child  { display: none !important;}
+
+
+
+
+/**! Własne menu notion - wymaga bloku cytatu na samej górze każdej strony (można użyć sync block) **/
+    /**? Testy **/
+            div.notion-quote-block:nth-child(1){
+                position: fixed !important;
+                top: 0px !important;
+                right: 0 !important;
+                z-index: 9999 !important;
+                max-width: 100% !important;
+                margin: 0 auto !important;
+                padding: 1vh 1.5vw !important;
+                backdrop-filter: blur(4px);
+            }
+
+            div.notion-quote-block:nth-child(1) > div > div{
+                border: none !important;
+            }
+
+            div.notion-quote-block:nth-child(1) > div > div > div{
+                display: flex !important;
+            }
+
+            div.notion-quote-block:nth-child(1) > div > div > div > a{
+                padding: 0 5px;
+            }
+
+            div.notion-quote-block:nth-child(1) > div > div > div > a:nth-child(1) > span{
+                border: none  !important;
+            }
+
+            div.notion-quote-block:nth-child(1) > div > div > div > a:nth-child(2){
+                margin-left: auto !important;
+            }
+
+
+
+
